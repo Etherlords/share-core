@@ -23,6 +23,8 @@ package core.codec
 			decodersMap['jpg'] = imageDecoder;
 			decodersMap['txt'] = FakeDecoder;
 			decodersMap['cxm'] = FakeDecoder;
+			decodersMap['mtl'] = FakeDecoder;
+			decodersMap['awd'] = AwdDecoder;
 			
 			decodersMap['obj'] = ObjDecoder;
 		}

@@ -1,9 +1,12 @@
 package characters.controller   
 {
+	import characters.controller.data.MoveData;
 	import characters.model.AnimationModel;
+	import characters.model.mobile.IPositionSetter;
+	import characters.view.ViewController;
 	import display.IActorController;
 	import display.utils.DimensionalMath;
-	import display.ViewController;
+	
 	import flash.events.EventDispatcher;
 	import flash.geom.Vector3D;
 	import geom.PathMathematic;

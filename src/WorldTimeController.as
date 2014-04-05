@@ -3,7 +3,7 @@ package
 	
 	public class WorldTimeController 
 	{
-		private var lastTime:Number = 0;
+		private var lastTime:Number = new Date().getTime();
 		
 		public var currentTime:Number = new Date().getTime();
 		

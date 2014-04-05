@@ -32,11 +32,14 @@ package display
 		private function initilize():void
 		{
 			displayList = new DisplayList(view.scene);
+			
+			worldStep.time = new Date().getTime();
 		}
 		
 		public function update():void
 		{
-			view.render();
+			if (view.parent)
+				view.render();
 			
 			var t:Number = new Date().getTime();
 			worldStep.dt = t - worldStep.time;

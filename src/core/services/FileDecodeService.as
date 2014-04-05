@@ -6,17 +6,15 @@ package core.services
 	import core.fileSystem.Directory;
 	import core.fileSystem.events.FileEvent;
 	import core.fileSystem.FsFile;
-	import flash.accessibility.Accessibility;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.ProgressEvent;
-	import flash.system.ApplicationDomain;
 	
-	public class FileLoadingService extends EventDispatcher implements IService
+	public class FileDecodeService extends EventDispatcher implements IService
 	{
 		public var fileDecoderFactory:FileDecoderFactory;
 		
-		public var fileLoadingManager:String = "FileLoader";
+		public var fileLoadingManager:Class = FileLoader;
 		
 		public var loadingQuee:int = 3;
 		
@@ -24,7 +22,7 @@ package core.services
 		private var loadTotal:int = 0;
 		private var currentlyLoad:int = 0;
 		
-		public function FileLoadingService() 
+		public function FileDecodeService() 
 		{
 			
 		}
@@ -77,10 +75,9 @@ package core.services
 		private function onLoadingComplete(e:Event, file:FsFile):void 
 		{
 			var loader:FileLoader = e.target as FileLoader;
-			file.nativeContent = loader.data;
 			
-			fileDecoderFactory.addEventListener(Event.COMPLETE, onDecodeComplete);
-			fileDecoderFactory.decode(file);
+			
+			
 			
 		}
 		
@@ -98,9 +95,8 @@ package core.services
 		
 		private function load(file:FsFile):void
 		{
-			var loader:FileLoader = new (ApplicationDomain.currentDomain.getDefinition(fileLoadingManager));
-			loader.addEventListener(Event.COMPLETE, Delegate.create(onLoadingComplete, file));
-			loader.load(file.nativePath);
+			fileDecoderFactory.addEventListener(Event.COMPLETE, onDecodeComplete);
+			fileDecoderFactory.decode(file);
 		}
 		
 	}

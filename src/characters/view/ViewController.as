@@ -20,6 +20,8 @@ package characters.view
 		protected var _displayObject:ObjectContainer3D;
 		private var currentTimePhase:Number 
 		
+		protected var sockets:Vector.<Socket> = new Vector.<Socket>();
+		
 		public var camera:Camera3D;
 		
 		public function ViewController(displayObject:ObjectContainer3D) 
@@ -40,22 +42,22 @@ package characters.view
 		
 		public function set y(value:Number):void
 		{
-			_displayObject.z = value;
+			_displayObject.y = value;
 		}
 		
 		public function get y():Number
 		{
-			return _displayObject.z
+			return _displayObject.y
 		}
 		
 		public function set z(value:Number):void
 		{
-			_displayObject.y = value;
+			_displayObject.z = value;
 		}
 		
 		public function get z():Number
 		{
-			return _displayObject.y
+			return _displayObject.z
 		}
 		
 		private static const CAMERA_VECTOR_HELPER:Vector3D = new Vector3D();
@@ -74,6 +76,12 @@ package characters.view
 			
 			currentTimePhase = worldStep.time;	
 			//_displayObject.visible = isInViewPlane;
+		}
+		
+		public function addSocket(socket:Socket):void
+		{
+			socket.attachTo(this);
+			sockets.push(socket);
 		}
 		
 		/* INTERFACE display.IActorController */

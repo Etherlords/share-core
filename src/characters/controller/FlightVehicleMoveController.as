@@ -58,7 +58,9 @@ package characters.controller
 		{
 			var dispalyObject:ObjectContainer3D = viewController.displayObject;
 			
+			
 			dispalyObject.moveForward(engineData.currentSpeed * partOfIteration);
+			
 		}
 		
 		private function speedDown():void 

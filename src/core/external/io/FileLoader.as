@@ -1,5 +1,6 @@
 package core.external.io 
 {
+	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
 	import flash.utils.ByteArray;
@@ -22,7 +23,7 @@ package core.external.io
 		
 		public function load(path:String):void
 		{
-			
+			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
 	}
