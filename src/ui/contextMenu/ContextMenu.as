@@ -5,11 +5,12 @@ package ui.contextMenu
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import ui.Button;
-	import ui.contextMenu.ContextMenuEvent;
+	import ui.contextMenu.events.ContextMenuEvent;
 	import ui.style.Style;
 	import ui.UIComponent;
+	import ui.UIComponetnBroadcaster;
 	
-	public class ContextMenu extends UIComponent 
+	public class ContextMenu extends UIComponetnBroadcaster 
 	{
 		private var elements:Vector.<UIComponent> = new Vector.<UIComponent>;
 		
