@@ -6,13 +6,12 @@ package core.services
 	import core.fileSystem.Directory;
 	import core.fileSystem.events.FileEvent;
 	import core.fileSystem.FsFile;
-	import flash.accessibility.Accessibility;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.ProgressEvent;
 	import flash.system.ApplicationDomain;
 	
-	public class FileLoadingService extends EventDispatcher implements IService
+	public class FileLoadingService extends EventDispatcher implements IFileService
 	{
 		public var fileDecoderFactory:FileDecoderFactory;
 		

@@ -1,7 +1,6 @@
 package core.services 
 {
 	import core.codec.FileDecoderFactory;
-	import core.Delegate;
 	import core.external.io.FileLoader;
 	import core.fileSystem.Directory;
 	import core.fileSystem.events.FileEvent;
@@ -10,7 +9,7 @@ package core.services
 	import flash.events.EventDispatcher;
 	import flash.events.ProgressEvent;
 	
-	public class FileDecodeService extends EventDispatcher implements IService
+	public class FileDecodeService extends EventDispatcher implements IFileService
 	{
 		public var fileDecoderFactory:FileDecoderFactory;
 		

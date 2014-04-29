@@ -10,6 +10,16 @@ package ui.style
 
 	public class StylesCollector 
 	{
+		private static var _instance:StylesCollector;
+		
+		static public function get instance():StylesCollector 
+		{
+			if (!_instance)
+				_instance = new StylesCollector();
+				
+			return _instance;
+		}
+		
 		public var styles:SimpleMap;
 		
 		public function StylesCollector() 
@@ -162,6 +172,8 @@ package ui.style
 		{
 			return styles.getItem(name);
 		}
+		
+		
 	}
 
 }

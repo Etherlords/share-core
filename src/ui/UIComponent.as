@@ -1,14 +1,22 @@
 package ui 
 {
 	import core.collections.Iterable;
+	import core.fileSystem.IFS;
 	import core.IDestructable;
+	import core.ioc.Context;
 	import flash.display.Sprite;
 	import ui.effects.OverEffect;
 	import ui.style.Style;
+	import ui.style.StylesCollector;
 	import ui.style.StyleSheet;
 	
 	public class UIComponent extends Sprite implements IDestructable
 	{
+		
+
+		public static var styles:StylesCollector = StylesCollector.instance;
+		public static var vfs:IFS;
+		
 		protected var _width:Number = 0;
 		protected var _height:Number = 0;
 		
@@ -23,6 +31,9 @@ package ui
 		
 		public function UIComponent(style:Style = null) 
 		{
+			if (!vfs)
+				vfs = Context.instance.getObjectByInterface('core.fileSystem::IFS') as IFS;
+				
 			_style = style;
 			
 			preinitialzie();
