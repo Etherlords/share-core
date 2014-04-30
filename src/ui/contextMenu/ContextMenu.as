@@ -20,6 +20,7 @@ package ui.contextMenu
 		private var background:ScaleBitmap;
 		
 		static private const BORDER_PADDING:Number = 5;
+		private var extradata:Object;
 		
 		public function ContextMenu(style:Style = null, width:Number = 150, height:Number = 400) 
 		{
@@ -44,8 +45,9 @@ package ui.contextMenu
 			addChild(background);
 		}
 		
-		public function show(menuModel:ContextMenuModel):void
+		public function show(menuModel:ContextMenuModel, extradata:Object = null):void
 		{
+			extradata = extradata;
 			if (subMenu)
 			{
 				removeComponent(subMenu)
@@ -105,6 +107,8 @@ package ui.contextMenu
 			var button:Button = e.currentTarget as Button;
 			
 			subMenu = new ContextMenu();
+			
+			subMenu.scopes = scopes;
 			subMenu.show(item.submenu);
 			
 			addComponent(subMenu);
@@ -121,7 +125,10 @@ package ui.contextMenu
 		
 		private function onMenuItemClick(e:MouseEvent, item:ContextItem):void 
 		{
-			dispatchEvent(new ContextMenuEvent(ContextMenuEvent.SELECT_ITEM, true, false, item));
+			var evt:ContextMenuEvent = new ContextMenuEvent(ContextMenuEvent.SELECT_ITEM, true, false, item, extradata)
+			
+			broadcast(evt);
+			dispatchEvent(evt);
 		}
 		
 		override protected function layoutChildren():void 

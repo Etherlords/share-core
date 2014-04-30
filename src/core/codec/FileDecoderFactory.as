@@ -26,6 +26,8 @@ package core.codec
 			decodersMap['mtl'] = FakeDecoder;
 			decodersMap['awd'] = AwdDecoder;
 			
+			decodersMap['ship'] = ShipDecoder;
+			
 			decodersMap['obj'] = ObjDecoder;
 		}
 		
