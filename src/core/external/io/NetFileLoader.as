@@ -36,7 +36,8 @@ package  core.external.io
 		{
 			var urlLoader:URLLoader = new URLLoader(new URLRequest(path));
 			urlLoader.dataFormat = URLLoaderDataFormat.BINARY
-			urlLoader.o
+//			urlLoader.o
+            var file:Object; //todo fix me
 			if (!async)
 			{
 				stream.open(file, FileMode.READ);

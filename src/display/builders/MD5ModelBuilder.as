@@ -8,7 +8,10 @@ package display.builders
 	import away3d.materials.methods.PhongSpecularMethod;
 	import away3d.materials.TextureMaterial;
 	import away3d.textures.BitmapTexture;
-	import display.ViewController;
+
+import characters.view.ViewController;
+
+import display.ViewController;
 	import mvc.mainscene.model.SceneSettings;
 	import resources.MD5MeshResource;
 	import resources.VFSManager;

@@ -14,7 +14,9 @@ package core.external.io
 	public class FileLoader extends EventDispatcher 
 	{
 		public var data:ByteArray;
-		
+
+        protected var stream:Object; //todo fix to particular class
+
 		public function FileLoader(target:flash.events.IEventDispatcher=null) 
 		{
 			super(target);

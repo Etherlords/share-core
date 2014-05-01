@@ -1,6 +1,6 @@
 package display.builders 
 {
-	import display.ViewController;
+import characters.view.ViewController;
 	
 	/**
 	 * ...
