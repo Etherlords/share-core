@@ -1,8 +1,9 @@
-package characters.model.mobile 
+package characters.utils
 {
-	import flash.geom.Vector3D;
-	import display.ViewController;
-	
+import characters.view.ViewController;
+
+import flash.geom.Vector3D;
+
 	/**
 	 * ...
 	 * @author Nikro

@@ -1,4 +1,4 @@
-package characters.model.mobile 
+package characters.utils
 {
 	import away3d.extrusions.Elevation;
 	import flash.geom.Point;

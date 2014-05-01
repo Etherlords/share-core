@@ -1,12 +1,14 @@
-package characters.model.mobile 
+package characters.utils
 {
-	import away3d.entities.Mesh;
-	import away3d.extrusions.Elevation;
-	import display.utils.DimensionalMath;
-	import display.ViewController;
-	import flash.geom.Vector3D;
-	
-	public class PositionSetter3D implements IPositionSetter
+import away3d.extrusions.Elevation;
+
+import characters.view.ViewController;
+
+import display.utils.DimensionalMath;
+
+import flash.geom.Vector3D;
+
+public class PositionSetter3D implements IPositionSetter
 	{
 		
 		public static const RAD_TO_DEGREE:Number = -180 / Math.PI;

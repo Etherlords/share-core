@@ -28,7 +28,7 @@ package ui.layout
 		
 		public function placeContent():void 
 		{
-			content.setSize(
+//			content.setSize(
 		}
 		
 	}

@@ -15,8 +15,8 @@ package ui.contextMenu
 		private var elements:Vector.<UIComponent> = new Vector.<UIComponent>;
 		
 		private var subMenu:ContextMenu;
-		private var width:Number;
-		private var height:Number;
+//		private var width:Number;
+//		private var height:Number;
 		private var background:ScaleBitmap;
 		
 		static private const BORDER_PADDING:Number = 5;

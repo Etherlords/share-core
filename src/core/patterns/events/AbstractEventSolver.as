@@ -1,7 +1,8 @@
-package patterns.events 
+package core.patterns.events
 {
-	import patterns.strategy.StrategyController;
-	/**
+import core.patterns.strategy.StrategyController;
+
+/**
 	 * ...
 	 * @author Nikro
 	 */

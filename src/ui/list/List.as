@@ -14,7 +14,7 @@ package ui.list
 			this.dataProvider = dataProvider;
 			super(style);
 			
-			this.selementsCount = selementsCount;
+//			this.selementsCount = selementsCount;
 		}
 		
 		override protected function initialize():void 

@@ -12,7 +12,7 @@ package ui.list
 		
 		public function buildItem():UIComponent
 		{
-			
+			return null;
 		}
 		
 	}

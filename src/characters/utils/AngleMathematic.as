@@ -1,4 +1,4 @@
-package characters.model.mobile 
+package characters.utils
 {
 	/**
 	 * ...

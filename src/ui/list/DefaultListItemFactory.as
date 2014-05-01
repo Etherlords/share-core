@@ -12,9 +12,9 @@ package ui.list
 			super();
 		}
 		
-		override public function buildItem(style:Style):UIComponent 
+		override public function buildItem():UIComponent
 		{
-			return new itemConstructor(style);
+			return new itemConstructor();
 		}
 	}
 

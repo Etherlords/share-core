@@ -1,4 +1,4 @@
-package patterns.strategy 
+package core.patterns.strategy
 {
 	/**
 	 * ...

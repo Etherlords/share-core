@@ -1,9 +1,10 @@
-package characters.model.mobile 
+package characters.utils
 {
-	import flash.geom.Vector3D;
-	import display.ViewController;
-	
-	public class PositionSetter implements IPositionSetter
+import characters.view.ViewController;
+
+import flash.geom.Vector3D;
+
+public class PositionSetter implements IPositionSetter
 	{
 		
 		public function PositionSetter() 

@@ -1,6 +1,8 @@
-package patterns.strategy 
+package core.patterns.strategy
 {
-	/**
+import patterns.strategy.SimpleAlgorithm;
+
+/**
 	 * ...
 	 * @author Nikro
 	 */
