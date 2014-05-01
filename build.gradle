@@ -1,0 +1,4 @@
+dependencies {
+    merged project(':away3d-core')
+    merged project(':share-ioc')
+}
