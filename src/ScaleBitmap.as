@@ -23,10 +23,12 @@ package  {
 		// ------------------------------------------------
 
 		
-		function ScaleBitmap(bmpData : BitmapData = null, pixelSnapping : String = "auto", smoothing : Boolean = false) {
+		function ScaleBitmap(bmpData : BitmapData = null, pixelSnapping : String = "auto", smoothing : Boolean = false, scale9Grid:Rectangle = null) {
 			
 			_originalBitmap = bmpData.clone();
 			super(_originalBitmap.clone(), pixelSnapping, smoothing);
+			
+			this.scale9Grid = scale9Grid;
 		}
 
 		// ------------------------------------------------
