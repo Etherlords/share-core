@@ -7,8 +7,6 @@ package ui
 	
 	public class Progress extends UIComponent
 	{
-		public var maxWidth:Number = 500;
-		
 		private var convasContainer:Bitmap;
 		private var convas:BitmapData;
 		
@@ -19,10 +17,9 @@ package ui
 		
 		public var fillStyle:int = 0;
 		
-		public function Progress(style:Style, progress:Number = 0, width:Number = 500) 
+		public function Progress(style:Style, progress:Number = 0) 
 		{
 			this._progress = progress;
-			_width = width;
 			
 			super(style);
 		}
@@ -30,7 +27,7 @@ package ui
 		override protected function buildStyleSheet():void 
 		{
 			super.buildStyleSheet();
-			addStyleSheet("width", "maxWidth");
+			addStyleSheet("width", "width");
 			addStyleSheet("background", "bgPattern");
 			addStyleSheet("progress", "progressPattern");
 		}
@@ -68,8 +65,9 @@ package ui
 			
 			_height = bgPattern.height;
 			
-			drawTiled(0, (bgPattern.width - progressPattern.width) / 2, progressPattern, _width);
-			drawTiled(0, 0, bgPattern, maxWidth);
+			var delta:Number = (bgPattern.width - progressPattern.width);
+			drawTiled(0, delta / 2, progressPattern, (_width - delta) * _progress);
+			drawTiled(0, 0, bgPattern, _width);
 		}
 		
 		private function drawTiled(x:Number, y:Number, source:BitmapData, w:Number):void

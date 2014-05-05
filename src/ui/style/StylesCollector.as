@@ -38,7 +38,7 @@ package ui.style
 		private function defaultStyles():void 
 		{
 			var preloadProgressStyle:Style = new Style();
-			preloadProgressStyle.fillStyle(new < String > ["background=@background", "progress=@progress", "width=522"]);
+			preloadProgressStyle.fillStyle(new < String > ["background=@background.png", "progress=@progress.png", "width=522"]);
 			
 			addStyle('preloadProgress', preloadProgressStyle);
 		}

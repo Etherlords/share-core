@@ -89,10 +89,11 @@ package core.services
 			
 			if (currentlyLoad == loadTotal)
 			{
+				
 				dispatchEvent(new Event(Event.COMPLETE));
 			}
 			else
-				dispatchEvent(new ProgressEvent(ProgressEvent.PROGRESS, false, false, currentlyLoad, loadTotal));
+				dispatchEvent(new ProgressEvent(ProgressEvent.PROGRESS, false, false, currentlyLoad, loadTotal-1));
 		}
 		
 		private function load(file:FsFile):void
