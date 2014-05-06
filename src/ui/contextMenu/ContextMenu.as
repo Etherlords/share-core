@@ -8,9 +8,9 @@ package ui.contextMenu
 	import ui.contextMenu.events.ContextMenuEvent;
 	import ui.style.Style;
 	import ui.UIComponent;
-	import ui.UIComponetnBroadcaster;
+	import ui.UIComponetBroadcaster;
 	
-	public class ContextMenu extends UIComponetnBroadcaster 
+	public class ContextMenu extends UIComponetBroadcaster 
 	{
 		private var elements:Vector.<UIComponent> = new Vector.<UIComponent>;
 		

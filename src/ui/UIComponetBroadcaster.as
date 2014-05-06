@@ -5,12 +5,12 @@ package ui
 	import flash.events.Event;
 	import ui.style.Style;
 
-	public class UIComponetnBroadcaster extends UIComponent implements IEventBroadcaster 
+	public class UIComponetBroadcaster extends UIComponent implements IEventBroadcaster 
 	{
 		
 		private var broadcaster:AbstractEventBroadcaster = new AbstractEventBroadcaster();
 		
-		public function UIComponetnBroadcaster(style:Style=null) 
+		public function UIComponetBroadcaster(style:Style=null) 
 		{
 			super(style);
 		}
