@@ -14,10 +14,7 @@ package ui
 		
 		private var chrome:ScaleBitmap;
 		private var imageView:Bitmap;
-		
-		private var _width:Number;
-		private var _height:Number;
-		
+
 		private var invalidateSize:Boolean = true;
 		
 		public function ImageViewer(image:BitmapData = null, _width:Number = 100, _height:Number = 100, style:Style=null) 

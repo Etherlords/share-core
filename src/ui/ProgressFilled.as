@@ -6,9 +6,7 @@ package ui
 	
 	public class ProgressFilled extends UIComponent
 	{
-		private var _width:Number = 200;
-		private var _height:Number = 25;
-		
+
 		public var bgPattern:BitmapData;
 		public var progressPattern:BitmapData;
 		

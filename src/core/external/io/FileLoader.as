@@ -3,7 +3,8 @@ package core.external.io
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
-	import flash.utils.ByteArray;
+import flash.filesystem.FileStream;
+import flash.utils.ByteArray;
 	
 	/**
 	 * Dispatched if file was modified
@@ -15,9 +16,8 @@ package core.external.io
 	{
 		public var data:ByteArray;
 
-        protected var stream:Object; //todo fix to particular class
 
-		public function FileLoader(target:flash.events.IEventDispatcher=null) 
+		public function FileLoader(target:flash.events.IEventDispatcher=null)
 		{
 			super(target);
 			

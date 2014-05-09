@@ -1,6 +1,5 @@
 package core.patterns.strategy
 {
-import patterns.strategy.SimpleAlgorithm;
 
 /**
 	 * ...

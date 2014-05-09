@@ -61,7 +61,7 @@ package display.animation
 			var nexAnimation:AnimationModel = animationSequence.shift();
 			
 			if (nexAnimation)
-				playAnimation(nexAnimation);
+				playAnimation = (nexAnimation);
 		}
 		
 		public function pushAnimation(animation:AnimationModel):void
@@ -85,7 +85,7 @@ package display.animation
 			lastTime = time;
 		}
 		
-		public function playAnimation(animation:AnimationModel):void
+		public function set playAnimation(animation:AnimationModel):void
 		{
 			if (_currentAnimation)
 				onAnimationDone();
@@ -136,7 +136,6 @@ package display.animation
 		{
 			return null
 		}
-		
-	}
+    }
 
 }

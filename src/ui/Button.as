@@ -16,9 +16,7 @@ package ui
 		public var normalPattern:BitmapData;
 		
 		private var _selected:Boolean = false;
-		
-		private var _width:Number = 140;
-		private var _height:Number = 50;
+
 		private var _label:String;
 		private var textField:TextField;
 		
@@ -27,6 +25,8 @@ package ui
 		public function Button(style:Style=null, label:String = "default") 
 		{
 			_label = label;
+            _width = 140;
+            _height = 50;
 			super(style);
 		}
 		

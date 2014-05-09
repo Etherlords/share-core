@@ -19,7 +19,10 @@ package  core.external.io
 	public class NetFileLoader extends FileLoader
 	{
 		public var async:Boolean = false;
-		
+
+        protected var stream:Object;//todo fixme
+
+
 		public function NetFileLoader(isAsync:Boolean = false) 
 		{
 			async = isAsync;
