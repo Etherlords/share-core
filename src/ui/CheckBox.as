@@ -14,11 +14,10 @@ package ui
 		
 		private var background:Bitmap = new Bitmap();
 		
-		public function CheckBox(selected:Boolean = false, style:Style = null) 
+		public function CheckBox(style:Style = null, selected:Boolean = false) 
 		{
-			super(style);
-			
 			_selected = selected;
+			super(style);
 		}
 		
 		public function get selected():Boolean 
@@ -60,6 +59,9 @@ package ui
 			
 			addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
 			setView();
+			
+			this.width = background.width;
+			this.height = background.height;
 		}
 		
 		private function onMouseDown(e:MouseEvent):void 

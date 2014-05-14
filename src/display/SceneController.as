@@ -29,6 +29,11 @@ package display
 			displayList.removeDisplayObject(actor);
 		}
 		
+		public function clear():void 
+		{
+			displayList.clear();
+		}
+		
 		private function initilize():void
 		{
 			displayList = new DisplayList(view.scene);

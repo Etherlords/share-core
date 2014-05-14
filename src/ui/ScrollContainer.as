@@ -94,7 +94,7 @@ package ui
 			topLeft = localToGlobal(topLeft);
 			bottomRight.setTo(topLeft.x + width, topLeft.y + height);
 			
-			if (!isInside(e.stageX, e.stageY, this))
+			if (!isInside(e.stageX, e.stageY))
 				return;
 			
 			var delta:Number = -100 / (_height - _content.height);
@@ -107,7 +107,7 @@ package ui
 			setContentPosition();
 		}
 		
-		private function isInside(x:Number, y:Number, obj:DisplayObject):Boolean
+		private function isInside(x:Number, y:Number):Boolean
 		{
 			return x > topLeft.x && x < bottomRight.x && y > topLeft.y && y < bottomRight.y
 		}
@@ -141,9 +141,7 @@ package ui
 		
 		public function set content(value:UIComponent):void 
 		{
-			_content = value;
-			
-			if (!_content)
+			if (_content)
 				container.removeComponent(_content);
 				
 			_content = value;

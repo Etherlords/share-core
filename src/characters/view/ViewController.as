@@ -84,7 +84,10 @@ package characters.view
 			sockets.push(socket);
 		}
 		
-		/* INTERFACE display.IActorController */
+		public function removeSocket(socket:Socket):void 
+		{
+			socket.detach();
+		}
 		
 		public function get ident():String 
 		{

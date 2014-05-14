@@ -165,7 +165,12 @@ package ui
 		
 		public function set label(value:String):void 
 		{
+			if (_label == value)
+				return;
+				
 			_label = value;
+			
+			textField.text = _label;
 		}
 		
 	}

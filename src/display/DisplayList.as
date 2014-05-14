@@ -32,6 +32,14 @@ package display
 					
 			scene.removeChild(actor.viewController.displayObject);
 		}
+		
+		public function clear():void 
+		{
+			while(displayList.length)
+			{
+				removeDisplayObject(displayList[0]);
+			}
+		}
 	}
 
 }

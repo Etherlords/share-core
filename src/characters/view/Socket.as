@@ -7,9 +7,13 @@ package characters.view
 	{
 		private var _rotation:Vector3D = new Vector3D();
 		private var _position:Vector3D = new Vector3D();
+		private var _scale:Number = 1;
 		
 		private var socketTarget:ObjectContainer3D;
-		private var obj:ObjectContainer3D;
+		public var content:ObjectContainer3D;
+		
+		public var type:int;
+		public var name:String;
 		
 		public function Socket() 
 		{
@@ -19,26 +23,47 @@ package characters.view
 		public function attachTo(view:ViewController):void
 		{
 			socketTarget = view.displayObject;
+			
+			if (content)
+				socketTarget.addChild(content);
 		}
 		
-		public function addContent(obj:ObjectContainer3D):void
+		public function detach():void 
 		{
-			this.obj = obj;
-			socketTarget.addChild(obj);
+			socketTarget.removeChild(content);
+			socketTarget = null;
+		}
+		
+		public function addContent(content:ObjectContainer3D):void
+		{
+			this.content = content;
+			socketTarget.addChild(content);
 			
 			applyPositionAndRotation();
 		}
 		
-		private function applyPositionAndRotation():void
+		public function applyPositionAndRotation():void
 		{
-			if (!obj)
+			if (!content)
 				return;
 				
-			obj.rotationX = _rotation.x;
-			obj.rotationY = _rotation.y;
-			obj.rotationZ = _rotation.z;
+			content.rotationX = _rotation.x;
+			content.rotationY = _rotation.y;
+			content.rotationZ = _rotation.z;
 			
-			obj.position = _position;
+			content.position = _position;
+			
+			content.scaleX = content.scaleY = content.scaleZ = _scale;
+		}
+		
+		public function set scale(value:Number):void
+		{
+			_scale = value;
+		}
+		
+		public function get scale():Number
+		{
+			return _scale;
 		}
 		
 		public function get position():Vector3D 

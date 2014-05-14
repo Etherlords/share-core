@@ -50,6 +50,11 @@ package ui.style
 			
 			addStyle('autorisation', preloadProgressStyle);
 			
+			var checkBoxStyle:Style = new Style()
+			checkBoxStyle.fillStyle(new < String > ["normalView=@res/textures/ui/checkbox/normal.png", "selectedView=@res/textures/ui/checkbox/selected.png"]);
+			
+			addStyle('checkBoxStyle', checkBoxStyle);
+			
 			
 			var newsScrolStyle:Style = new Style();
 			newsScrolStyle.fillStyle(new <String>[
@@ -149,7 +154,7 @@ package ui.style
 			var newsTextFormat:Style = new Style();
 			newsTextFormat.fillStyle(new < String >
 										[
-											"textSize=18", "font=Courier New", "textColor=0xFFFFFF",
+											"textSize=14", "font=Courier New", "textColor=0xFFFFFF",
 											"shaprness=-400", "gridFitType=" + GridFitType.SUBPIXEL,
 											"antiAliasType=" + AntiAliasType.ADVANCED,
 											"textAlign="+TextFormatAlign.LEFT,
